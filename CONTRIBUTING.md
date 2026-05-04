@@ -44,8 +44,7 @@ orbital/
 │   ├── pulse-webhooks/   # HMAC delivery, retry, SSRF protection
 │   └── pulse-notify/     # React hooks
 ├── apps/
-│   ├── server/           # Reference Express server
-│   └── web/              # Next.js documentation site
+│   └── web/              # Next.js marketing + documentation site
 ├── tsconfig.base.json    # Shared TypeScript config
 └── pnpm-workspace.yaml
 ```
@@ -81,9 +80,9 @@ pnpm --filter @orbital/pulse-core test
 pnpm --filter @orbital/pulse-core exec vitest
 ```
 
-**Start the reference server:**
+**Start the marketing/docs site:**
 ```bash
-NETWORK=testnet API_KEY=dev pnpm --filter @orbital/server dev
+pnpm --filter orbital/web dev
 ```
 
 ---

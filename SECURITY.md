@@ -24,9 +24,8 @@ We will acknowledge your report within **72 hours** and aim to ship a fix within
 
 In scope:
 - `packages/pulse-core` — SSE stream handling, event normalization
-- `packages/pulse-webhooks` — HMAC signing, delivery, SSRF protections
+- `packages/pulse-webhooks` — HMAC signing, delivery, SSRF protections, edge-runtime verification
 - `packages/pulse-notify` — React hooks
-- `apps/server` — API key validation, auth middleware, rate limiting
 
 Out of scope:
 - Vulnerabilities in third-party dependencies (report upstream; open a Dependabot advisory here if you want to track it)
