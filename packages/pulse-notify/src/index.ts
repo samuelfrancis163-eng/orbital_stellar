@@ -224,7 +224,9 @@ export function useStellarHistory<T extends NormalizedEvent = NormalizedEvent>(
   options?: UseHistoryOptions<T>,
 ): HistoryState<T> {
   const capacity = options?.capacity ?? 100;
-  const base = useStellarActivity<T>(serverUrl, address, { initialEvent: options?.initialEvent ?? null });
+  const base = useStellarActivity<T>(serverUrl, address, {
+    initialEvent: options?.initialEvent ?? null,
+  });
   const [history, setHistory] = useState<T[]>(options?.initialEvent ? [options.initialEvent] : []);
 
   useEffect(() => {
